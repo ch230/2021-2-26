@@ -1,67 +1,35 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+    <div id="app">
+        <router-view></router-view>
+    </div>
 </template>
-
 <script>
-import axios from "axios";
 export default {
-  name: "app",
-  data() {
-    return {};
-  },
-  created() {
-    this.$nextTick(() => {
-      // 禁用右键
-      document.oncontextmenu = new Function("event.returnValue=false");
-      // 禁用选择
-      document.onselectstart = new Function("event.returnValue=false");
-    });
-  },
-  methods: {}
+    data() {
+        return {};
+    },
+    created() {},
+    methods: {}
 };
 </script>
-
-<style lang="scss">
-html,
-body {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
+<style>
+@import './assets/css/main.css';
+@import './assets/css/color-dark.css';
+/*深色主题*/
+/* @import "./assets/css/theme-green/color-green.css";   浅绿色主题 */
+.content-box {
+    background: #ffffff;
 }
-body {
-  font-size: 14px;
-  background-color: #fbf9fe;
-  list-style: none;
+.el-table--mini,
+.el-table--small,
+.el-table__expand-icon {
+    font-size: 13px !important;
 }
-select {
-  appearance: none;
-  -moz-appearance: none; /* Firefox */
-  -webkit-appearance: none; /* Safari 和 Chrome */
+.el-form-item__label {
+    font-size: 13px !important;
 }
-html,
-body {
-  min-height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  height: 100%;
-}
-
-#app {
-  min-height: 100%;
-  height: 100%;
-  width: 100%;
-  list-style: none;
-  .loading-box {
-    height: 100%;
-    width: 100%;
-  }
-}
-* {
-  list-style: none;
+ul,
+ol {
+    list-style: none;
 }
 </style>
